@@ -1,13 +1,13 @@
 # aerkiaga
 
-Aritz Erkiaga: programmer at heart, medical student by choice. Absolutely not a Web developer though...
+**Aritz Erkiaga**: _programmer at heart, medical student by choice. Absolutely not a Web developer though..._
 
 Please make yourself at home; I only have [this draft GSoC application](aerkiaga.github.io/docs/gsoc2022.pdf) to offer.
 
-I enjoy using [Avogadro](two.avogadro.cc). So much in fact, that I did spend a
-few days contributing to the project. Now, I've come to realize that this year,
-Google will allow _everyone_ to participate in Summer of Code... Including
-me (presumably)! What an opportunity to spend way more days working on this!
+I enjoy using [Avogadro](two.avogadro.cc). In fact, I did spend a few days
+contributing to the project. Now, I've come to realize that this year, Google
+will allow _everyone_ to participate in Summer of Code... Including me
+(presumably)! What an opportunity to spend way more days working on this!
 
 I fully placed my bet on Open Chemistry, I have no interest in any other
 organization; so, right after learning they had been accepted again this year,
