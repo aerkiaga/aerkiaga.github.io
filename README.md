@@ -2,7 +2,7 @@
 
 **Aritz Erkiaga**: _programmer at heart, medical student by choice. Absolutely not a Web developer though..._
 
-Please make yourself at home; I only have [this draft GSoC application](docs/gsoc2022.pdf) to offer.
+Please make yourself at home; I only have [this GSoC application](docs/gsoc2022.pdf) to offer.
 
 I enjoy using [Avogadro](https://two.avogadro.cc/). Now, I've come to realize
 that this year, Google will allow _everyone_ to participate in Summer of Code...
