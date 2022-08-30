@@ -35,6 +35,11 @@
         color: #77a;
         text-decoration: none;
       }
+      @media (max-width: 600px) {
+        img {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -50,9 +55,11 @@
       is the initial proposal; now I'd like to share
       my experience and review what was done.
     </p>
-    <h3>Early work</h3>
+    <h3>Early performance work</h3>
     <p>
       My work on Avogadro started way before GSoC.
+      Most of it involved fixes and optimization,
+      as well as completing one of my GSoC goals: formal charge support.
       <ul>
         <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/819">
           <b>Jan 22</b>: Fixed a bug I had encountered 2 months prior, corrupting molecules.
@@ -75,11 +82,58 @@
         <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/830">
           <b>Mar 9</b>: Fixed some elements not being recognized in PDB files.
         </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/833">
+          <b>Mar 9</b>: Optimized secondary structure perception for even faster PDB import.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/837">
+          <b>Mar 11</b>: Polished some of my previous changes.
+        </a></li>
         <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/831">
           <b>Mar 12</b>: Added formal charge support to CML import,
           as well as all-substituted "onium" cation detection to PDB.
         </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/860">
+          <b>Apr 22</b>: Optimized B-spline cartoons to be 3x faster.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/832">
+          <b>Apr 23</b>: Refactored molecule handling code for speed improvements across the board.
+        </a></li>
       </ul>
+      Overall, these changes managed 35-50 times faster PDB import,
+      as well as 15 times faster hydrogen adjustment, to give a few numbers.
+    </p>
+    <h3>More low-level changes</h3>
     <p>
+      The weeks before starting GSoC were focused on
+      cleaning up the code.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/862">
+          <b>Apr 23</b>: Implemented helper class that I'd end using throughout the summer.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/868">
+          <b>Apr 24</b>: Added a plugin to focus the camera on the selected region.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/878">
+          <b>Apr 30</b>: Finished and refactored the subgraph detection code.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/887">
+          <b>May 1</b>: Fixed some initialization errors reported by Valgrind.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/890">
+          <b>May 8</b>: Tracked down all Valgrind errors.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/896">
+          <b>May 21</b>: Fixed a bug in the helper class, found while working on surfaces.
+        </a></li>
+      </ul>
+    </p>
+    <h3>First months: surfaces and interactions</h3>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/897">
+          <b>Jun 21</b>: Initial implementation of surfaces.
+        </a></li>
+      </ul>
+    </p>
   </body>
 </html>
