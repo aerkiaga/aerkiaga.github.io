@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GSoC 2022 Report</title>
+    <style type="text/css">
+      body {
+        margin: 40px auto;
+        max-width: 800px;
+        line-height: 1.6;
+        font-size: 18px;
+        color: #444;
+        padding: 0 10px;
+      }
+      h1,h2,h3 {
+        line-height: 1.2;
+      }
+      figcaption {
+        font-size: 15px;
+      }
+      a:link {
+        color: #07a;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #73a;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #77a;
+        text-decoration: underline;
+      }
+      a:active {
+        color: #77a;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>GSoC 2022</h1>
+      <h2>Enhancing Avogadro for Biomolecular Modeling</h2>
+    </header>
+    <p>
+      This summer I set out to improve
+      <a href="https://two.avogadro.cc/">Avogadro 2</a>
+      for better handling biomolecules.
+      <a href="./docs/gsoc2022.pdf">Here</a>
+      is the initial proposal; now I'd like to share
+      my experience and review what was done.
+    </p>
+    <h3>Early work</h3>
+    <p>
+      My work on Avogadro started way before GSoC.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/819">
+          <b>Jan 22</b>: Fixed a bug I had encountered 2 months prior, corrupting molecules.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/825">
+          <b>Feb 24</b>: Fixed another bug that was annoying me: tools were not working.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/829">
+          <b>Mar 9</b>: After deciding I'd apply for GSoC, I optimized bond perception and thus PDB import.
+        </a></li>
+      </ul>
+    <p>
+    <figure>
+      <img src="./img/perf1.png" title="PDB import performace chart"
+      alt="Line chart, showing a 5-10x improvement over the preceding code for PDB loading">
+      <figcaption>Performace impact of the aforementioned optimization.</figcaption>
+    </figure>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/830">
+          <b>Mar 9</b>: Fixed some elements not being recognized in PDB files.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/831">
+          <b>Mar 12</b>: Added formal charge support to CML import,
+          as well as all-substituted "onium" cation detection to PDB.
+        </a></li>
+      </ul>
+    <p>
+  </body>
+</html>
