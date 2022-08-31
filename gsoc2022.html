@@ -127,13 +127,228 @@
         </a></li>
       </ul>
     </p>
-    <h3>First months: surfaces and interactions</h3>
+    <h3>June: non-covalent interactions</h3>
     <p>
+      One of my goals this summer was to implement at least one kind of molecular interaction,
+      that would be rendered in a predictive manner.
+      In June, I ended up implementing both generic "close contacts" and
+      angle-dependent pair-hole interactions: hydrogen, chalcogen and halogen bonds.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/898">
+          <b>May 27</b>: Initial "close contacts" rendering.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/905">
+          <b>May 27</b>: Optimized and renamed helper class API.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/911">
+          <b>May 29</b>: Made "close contacts" respect layers.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/912">
+          <b>May 29</b>: Fix uninitialized value error on "Insert DNA" tool.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/926">
+          <b>Jun 4</b>: Implemented hydrogen bonds.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/939">
+          <b>Jun 14</b>: Take angles into account when predicting hydrogen bonds.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/940">
+          <b>Jun 14</b>: Refactored some code into a new class.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/945">
+          <b>Jun 14</b>: Refactored to use new class.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/947">
+          <b>Jun 14</b>: Enabled smooth dashed lines for hydrogen bonds and close contacts.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/946">
+          <b>Jun 15</b>: Finished hydrogen bond prediction method based on angles.
+        </a></li>
+      </ul>
+    </p>
+    <figure>
+      <img src="./img/hbond1.png" title="Example of hydrogen bonds being predicted"
+      alt="Avogadro 2 screenshot, showing two hydrogen bonds and a close contact">
+      <figcaption>Intermolecular hydrogen bond prediction.</figcaption>
+    </figure>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/949">
+          <b>Jun 16</b>: Added halogen and chalcogen bonds, using the same principle.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/961">
+          <b>Jun 17</b>: Optimized and cleaned up non-covalent code.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/966">
+          <b>Jun 18</b>: Added a few missing bond acceptors, relative distances.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/969">
+          <b>Jun 21</b>: Implemented a tabbed UI for non-covalent bonds.
+        </a></li>
+      </ul>
+    </p>
+    <h3>June-July: molecular surfaces</h3>
+    <p>
+      The other major goal of mine was getting the unfinished molecular surface generation code to work.
+      A marching cubes algorithm was already in place for generating meshes,
+      all that was missing was computing some sort of distance function,
+      plus a Laplacian smoothing algorithm to make the mesh look nice afterwards.
+      I also had the goal to get surface coloring by mapping at least one property.
       <ul>
         <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/897">
           <b>Jun 21</b>: Initial implementation of surfaces.
         </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/972">
+          <b>Jun 24</b>: Implemented solvent-excluded surfaces.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/975">
+          <b>Jun 27</b>: Added Laplacian mesh smoothing.
+        </a></li>
       </ul>
     </p>
+    <figure>
+      <img src="./img/surf1.png" title="Smooth solvent-excluded surface"
+      alt="Avogadro 2 screenshot, showing a translucent surface generated around an aconitase molecule">
+      <figcaption>Solvent-excluded surface with Laplacian smoothing, aconitase.</figcaption>
+    </figure>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/976">
+          <b>Jun 28</b>: Improved the UX with default values, more choice, optimization.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/980">
+          <b>Jun 29</b>: Fixed hydrogen geometry being miscalculated.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/985">
+          <b>Jun 30</b>: Optimized Laplacian mesh smoothing.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/990">
+          <b>Jul 3</b>: Refactor: use float instead of double within cube data.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1003">
+          <b>Jul 8</b>: Respect atom visibility in surfaces.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/997">
+          <b>Jul 10</b>: Initial mesh coloring.
+        </a></li>
+      </ul>
+    </p>
+    <figure>
+      <img src="./img/surf2.png" title="Solvent-accessible surface, colored by potential"
+      alt="An Aspirin molecule with a solvent-accessible surface colored by electrostatic potential">
+      <figcaption>Aspirin, with SAS colored by electrostatic potential (Gasteiger).</figcaption>
+    </figure>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1016">
+          <b>Jul 12</b>: Implemented choosing surface charge model from the UI.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1020">
+          <b>Jul 13</b>: Fix colored surface generation sometimes locking up.
+        </a></li>
+      </ul>
+      So, everything went smooth: Van der Waals, Solvent Accessible and the
+      somewhat more complicated Solvent Excluded surfaces were all implemented,
+      with Laplacian smoothing in place and coloring by electrostatic potential
+      (with many methods and color schemes to choose).
+    </p>
+    <h3>July: revisiting everything</h3>
+    <p>
+      I had been made aware of a missing functionality with PDB/MMTF that
+      had caused problems to at least one user.
+      At the same time, I wanted to finish the remaining non-covalent interactions:
+      salt bridges and "bad" contacts.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1021">
+          <b>Jul 16</b>: Added salt bridges to the "close contacts" plugin.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1026">
+          <b>Jul 16</b>: Extended the tabbed interface to "close contacts".
+        </a></li>
+      </ul>
+    </p>
+    <figure>
+      <img src="./img/hbond2.png" title="A selection of non-covalent interactions"
+      alt="Zoomed view into '1ayo', displaying many salt bridges, hydrogen and chalcogen bonds...">
+      <figcaption>Different kinds of interactions on the surface of <code>1ayo</code>.</figcaption>
+    </figure>
+    <p>
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1031">
+          <b>Jul 19</b>: Fixed segfaults in Surfaces and Select Backbone.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1047">
+          <b>Jul 23</b>: Added AltLoc support to the PDB import code.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1055">
+          <b>Jul 25</b>: New automated test, fixed AltLoc support.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1057">
+          <b>Jul 26</b>: Extended AltLoc to the MMTF importer, with new test.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1061">
+          <b>Jul 28</b>: Optimized the helper class (could be useful to add coloring by hydrophobicity).
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1065">
+          <b>Jul 29</b>: Fixed bug with scrolling on some platforms.
+        </a></li>
+      </ul>
+    </p>
+    <h3>Helping out with templates</h3>
+    <p>
+      I had stated as a GSoC goal that I would work on coordination compounds.
+      While I had a vague idea of what that could mean
+      (updated charge/order/valency perception, zero-order bonds...)
+      and had sketched some more or less developed proposals,
+      an opportunity arose to work on meaningful functionality.
+      My mentor, Geoff, had been working on a new tool to easily create
+      coordination complexes and add chemical groups to molecules.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1075">
+          <b>Aug 11</b>: Initial template tool, by Geoff Hutchison, with a few commits by me.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1080">
+          <b>Aug 14</b>: Implemented an algorithm to place polydentate ligands.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1090">
+          <b>Aug 14</b>: Added a formal charge combobox to the template tool.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1097">
+          <b>Aug 15</b>:
+          Fixed tool, added ligands and preview, by Geoff Hutchison, with some fixes of mine.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1098">
+          <b>Aug 15</b>: Fixed some random issues with templates.
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1099">
+          <b>Aug 16</b>: Implemented method to estimate distances in templates.
+        </a></li>
+      </ul>
+    </p>
+    <figure>
+      <img src="./img/template.png" title="An example coordination compound made with the new tool"
+      alt="An iron-containing complex, with porphin, cyano and Cp ligands">
+      <figcaption>Complex of iron with porphin, cyano- and Cp ligands.</figcaption>
+    </figure>
+    <h3>Bonus: fancier rendering</h3>
+    <p>
+      Having finished all the proposed tasks, and with a few weeks remaining,
+      I decided to go for a more ambitious target.
+      I would try to implement post-processing shaders,
+      and learn graphics programming along the path, in a practical way.
+      <ul>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1135">
+          <b>Aug 25</b>: Screen-space shading (including SSAO and edge detection).
+        </a></li>
+        <li><a href="https://github.com/OpenChemistry/avogadrolibs/pull/1148">
+          <b>Aug 26</b>: Mitigate gright edges when AO is used without ED.
+        </a></li>
+      </ul>
+    </p>
+    <figure>
+      <img src="./img/rendering.png" title="An entire ribosome as seen with the new rendering code"
+      alt="Avogadro 2 screenshot, showing a ribosome with Ambient Occlusion and Edge Detection on">
+      <figcaption>Ribosome, with SSAO and Edge Detection enabled.</figcaption>
+    </figure>
   </body>
 </html>
